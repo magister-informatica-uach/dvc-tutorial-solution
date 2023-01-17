@@ -47,11 +47,11 @@ stages:
     params:
       params.yaml:
         train.criterion: entropy
-        train.max_depth: 1
+        train.max_depth: 10
     outs:
     - path: models/
-      md5: f0eba8452141d52be8576bc54ab58490.dir
-      size: 2557
+      md5: 9c7c3ec5ca1ae474da040a2e389eba64.dir
+      size: 3424
       nfiles: 2
   evaluate_model:
     cmd: python src/evaluate_classifier.py
@@ -61,16 +61,16 @@ stages:
       size: 871
       nfiles: 1
     - path: models/
-      md5: f0eba8452141d52be8576bc54ab58490.dir
-      size: 2557
+      md5: 9c7c3ec5ca1ae474da040a2e389eba64.dir
+      size: 3424
       nfiles: 2
     - path: src/evaluate_classifier.py
       md5: c5c3e5a826f26f91fe0dfada74be6eb7
       size: 995
     outs:
     - path: classification_report.csv
-      md5: 6b888dd1964cb31c4100036a948690e3
+      md5: 5519f03c415c1d1476137322a6d7c53c
       size: 214
     - path: metrics.json
-      md5: 762b99cb3ef021771ea6608770076a4c
-      size: 32
+      md5: 3c25a76adf663f2f495d1eeca3c7faf7
+      size: 31
